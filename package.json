@@ -1,0 +1,28 @@
+{
+  "name": "usof_tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "tests:open": "npx cypress open --config-file='base.config.js'",
+    "tests:run:ci": "npx cypress run --env grepTags=@ci+@smoke --config-file='base.config.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sashasher24/usof_tests.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sashasher24/usof_tests/issues"
+  },
+  "homepage": "https://github.com/sashasher24/usof_tests#readme",
+  "devDependencies": {
+    "@cypress/grep": "^3.1.5",
+    "cypress": "^12.17.4"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}
