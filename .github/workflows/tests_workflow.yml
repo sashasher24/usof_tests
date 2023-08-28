@@ -1,0 +1,26 @@
+name: Test Workflow
+
+on:
+  workflow_run:
+    workflows: ["Application PR Workflow"]
+    types:
+      - completed
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Set up environment for tests
+      run: |
+        echo "$ENV_FILE" > .env 
+      # Set your test environment variables
+
+    - name: Install dependencies
+      run: npm install  # Or your package manager command
+
+    - name: Run tests
+      run: npm run tests:run:all  # Or the command to run your tests against the localhost

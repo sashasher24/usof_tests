@@ -6,6 +6,7 @@
   "scripts": {
     "test": "test",
     "tests:open": "npx cypress open --config-file='base.config.js'",
+    "tests:run:all": "npx cypress run --config-file='base.config.js'",
     "tests:run:ci": "npx cypress run --env grepTags=@ci+@smoke --config-file='base.config.js'"
   },
   "repository": {
